@@ -1,7 +1,16 @@
+"use strict";
+const button = document.querySelector("button");
 
-let colors = ["red", "blue", "green", "black", "yellow", "pink", "purple", "gray", "powderblue", "orange"];
+const body = document.querySelector("body");
+
+const colors = ["red", "blue", "green", "black", "yellow", "pink", "purple", "gray", "powderblue", "orange"];
+
+body.style.backgroundColor = "violet";
+
+button.addEventListener('click', changeColor);
+
 
 function changeColor() {
   let ranNum = Math.floor(Math.random()*10);
-  document.body.style.backgroundColor = colors[ranNum];
+  body.style.backgroundColor = colors[ranNum];
 }
